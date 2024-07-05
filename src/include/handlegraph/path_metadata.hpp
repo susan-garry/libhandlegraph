@@ -234,7 +234,7 @@ protected:
     /// If the graph contains compressed haplotype paths and properly
     /// implements for_each_path_of_sense to retrieve them, they should not be
     /// visible here. Only reference or generic named paths should be visible.
-    virtual bool for_each_path_handle_impl(const std::function<bool(const path_handle_t&)>& iteratee) const = 0;
+    virtual bool for_each_path_handle_impl(const std::function<bool(const path_handle_t&)>& iteratee, bool parallel = false) const = 0;
     
     /// Execute a function on each step of a handle in any path. If it
     /// returns false, stop iteration. Returns true if we finished and false if
